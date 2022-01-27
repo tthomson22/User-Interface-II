@@ -1,109 +1,204 @@
 /* Add CSS styling here */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* font-family: 'Rubik', sans-serif; */
+
 *{
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    max-width:100%;
-    color:#D6D86E;
-    /* border: 1px solid black; */
-    text-decoration: none;
+    max-width: 100%;
 }
 
 html{
-    font-size: 16px;
+    font-size: 62.5%;
+    font-family: 'Rubik', sans-serif;
 }
 
 body{
-    background-color:#3F5479;
-}
-header{
-    background-color: black;
-    font-size:30px;
-    padding-top: 5%;
-    padding-left: 10px;
-    display: flex;
-    flex-flow: column wrap;
-}
-
-.navbar{
-    width: 100%;
-    height: 30px;
-    background-color: #7F2879;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    position: fixed;
-    top: 0;
-}
-
-.navbar a{
-    font-size: 20px;
+    line-height: 1.5;
+    font-size: 1.8rem;
+    background-image: url(../assets/ball_img.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #3F5479;
-    border: 3px solid black;
+    color: #D6D86E;
 }
 
-.about{
-    border: 10px solid black;
+h2{
+    font-size: 4rem;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color:#D6D86E;
+}
+
+nav{
     display: flex;
-    flex-flow: row nowrap;
-    /* align-items: flex-end; */
-}
-.img_container{
-    width: 30%;
-}
-.about_me{
-    padding-left: 10px;
-    font-size: 20px;
-    width: 50%;
-    height: 100%;
-}
-
-.proj_nav{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-content: space-evenly;
-}
-
-.proj_nav div{
-    width: 50%;
-    height: 25%;
-}
-
-
-.hidden_button{
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    text-align: center;
     background-color: #7F2879;
-    font-size: 20px;
 }
-.hidden_button:hover{
+
+.logo{
+    width: 10%;
     background-color:#3F5479;
-    color: #7F2879
+}
+
+.logo img{
+    width: 40%;
+}
+
+.links{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header{
+    height: 100vh;
+    width: 60vw;
+    font-size: 5rem;
+    display: flex;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    text-align: left;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-content: center;
+}
+header p{
+    font-size: 3rem;
+}
+
+.introduction{
+    padding-left: 5%;
+}
+
+#about{
+    height: 70vh;
+    display: flex;
+    background-color: #3F5479;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* padding: 20% 0; */
+}
+
+.about_text{
+    width: 50%;
+    height: 70vh;
+    margin: 2%;
+}
+
+.about_img{
+    width: 50%;
+    margin: 2%;
+    background-image: url(../assets/snail_logo.png);
+    background-repeat: no-repeat;
+}
+
+.row{
+    background-color: #3F5479;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.proj{
+    text-align: center;
 }
 
 footer{
-
-    padding-bottom: 0;
+    height: 30vh;
     background-color: black;
-    height: 200px;
 }
 
 footer div{
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-evenly;
 }
 
-.email{
-    font-size: 30px;
-    background-color: #3F5479;
+@media (max-width: 800px) {
+    .about_img{
+        height: 50%;
+        width: 100%;
+    }
+    .about_text{
+        height: 50%;
+        width: 100%;
+    }
+    #about{
+        width:100%;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
 
-.linkedin{
-    font-size: 30px;
-    background-color: #3F5479;
-}
-
-.git{
-    font-size: 30px;
-    background-color: #3F5479;
+@media (max-width: 500px) {
+    body{
+        background-image: none;
+        background-color: black;
+    }
+    header{
+        width: 100vw;
+    }
+    .logo{
+        display: none;
+    }
 }
